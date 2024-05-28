@@ -4,20 +4,13 @@ pipeline {
             label 'maven'
         }
     }
-
-    parameters {
-        gitParameter name: 'BRANCH_NAME', branch: '', branchFilter: '.*', defaultValue: 'master', description: '请选择要发布的分支'
-        choice(name: 'NAMESPACE', choices: ['devops-dev', 'devops-test', 'devops-prod'], description: '命名空间')
-        string(name: 'TAG_NAME', defaultValue: 'snapshot', description: '标签名称, 必须以v开头, 例如: v1、v1.0.0')
-    }
-
     environment {
         DOCKER_CREDENTIAL_ID = 'harbor-key'
         GIT_REPO_URL = '10.1.3.245:28080'
         GIT_CREDENTIAL_ID = 'gitlab'
         GIT_ACCOUNT = 'root'
         KUBECONFIG_CREDENTIAL_ID = 'cec20125-d68d-4079-bd48-ac3af0898272'
-        REGISTRY = '10.1.3.245:8081'
+        REGISTRY = 'http://10.1.3.245:8081'
         APP_NAME = 'k8s-cicd-demo'
         SONAR_SERVER_URL = 'http://10.1.3.246:30004'
         SONAR_CREDENTIAL_ID = 'sonarqube-token'
