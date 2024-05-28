@@ -1,15 +1,9 @@
-FROM golang:1.22.1
+FROM golang:1.14
 
-##作者
-MAINTAINER zhaoxiaoqiang<1546985126@qq.com>
-
-##定义参数
-# 为我们的镜像设置必要的环境变量
 ENV GO111MODULE=on \
-    CGO_ENABLED=0 \
-    GOOS=linux \
-    GOARCH=amd64 \
-	GOPROXY="https://goproxy.cn,direct"
+    GOPROXY=https://goproxy.cn,direct \
+    GIN_MODE=release \
+    PORT=80
 
 # 声明服务端口
 EXPOSE 9090

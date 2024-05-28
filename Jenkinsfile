@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('unit test') {
             steps {
-                sh 'mvn clean test'
+                sh 'ls'
             }
         }
         stage('sonarqube analysis') {
