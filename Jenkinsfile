@@ -22,9 +22,7 @@ pipeline {
              }
              steps {
                   input(id: 'deploy-to-dev', message: 'deploy to dev?')
-                  sh '''
-                        kubectl apply -f deploy/cicd-demo-dev.yaml
-                  '''
+                  sh 'kubectl apply -f deploy/cicd-demo-dev.yaml'
               }
          }
     }
