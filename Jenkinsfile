@@ -6,9 +6,9 @@ pipeline {
     }
 
     parameters {
-        gitParameter name: 'BRANCH_NAME', branch: '', branchFilter: '.*', defaultvalue: 'master', description: '请选择要发布的分支'
-        choice(name: 'NAMESPACE', choice: ['devops-dev', 'devops-test', 'devops-prod'], description: '命名空间')
-        string(name: 'TAG_NAME', defaultvalue: 'snapshot', description: '标签名称, 必须以v开头, 例如: v1、v1.0.0')
+        gitParameter name: 'BRANCH_NAME', branch: '', branchFilter: '.*', defaultValue: 'master', description: '请选择要发布的分支'
+        choice(name: 'NAMESPACE', choices: ['devops-dev', 'devops-test', 'devops-prod'], description: '命名空间')
+        string(name: 'TAG_NAME', defaultValue: 'snapshot', description: '标签名称, 必须以v开头, 例如: v1、v1.0.0')
     }
 
     environment {
@@ -29,7 +29,7 @@ pipeline {
             }
         }
         stage('sonarqube analysis') {
-            stage {
+            steps {
                 withCredentials([string(credentialsId: "$SONAR_CREDENTIAL_ID", variable: 'SONAR_TOKEN')]) {
                     withSonarQubeEnv('sonarqube') {
                         sh 'mvn sonar:sonar -Dsonar.projectkey=$APP_NAME'
