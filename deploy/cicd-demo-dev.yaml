@@ -27,8 +27,8 @@ spec:
         component: zxq-devops
         tier: backend
     spec:
-      imagePullSecrets:
-        - name: k8s-cicd-demo
+      #imagePullSecrets:
+      #  - name: k8s-cicd-demo
       containers:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
