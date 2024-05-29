@@ -18,7 +18,6 @@ pipeline {
     stages {
         stage('deploy to dev') {
              steps {
-                  input(id: 'deploy-to-dev', message: 'deploy to dev?')
                   sh 'kubectl apply -f deploy/cicd-demo-dev.yaml'
               }
          }
