@@ -14,6 +14,6 @@ FROM registry.cn-hangzhou.aliyuncs.com/aerith/alpine:3.18.0
 WORKDIR /devops-test
 
 RUN mkdir /devops-test/bin
-#COPY --from=builder /devops-test/* /devops-test/bin/
+COPY --from=builder /devops-test/* /devops-test/bin/
 EXPOSE 8080
 
