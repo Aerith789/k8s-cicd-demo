@@ -39,7 +39,6 @@ spec:
             timeoutSeconds: 10
             failureThreshold: 30
             periodSeconds: 5
-          imagePullPolicy: Always
           ports:
             - containerPort: 8080
               protocol: TCP
