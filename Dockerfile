@@ -13,4 +13,5 @@ EXPOSE 9090
 RUN mkdir /devops-test
 WORKDIR /devops-test
 
-COPY /devops-test/ /
+COPY main.go /devops-test
+COPY go.mod /devops-test
