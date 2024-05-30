@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/aerith/golang-builder:v1.21.5-alpine
+FROM registry.cn-hangzhou.aliyuncs.com/aerith/golang-builder:v1.22.3
 
 ENV GO111MODULE=on \
     GOPROXY=https://goproxy.cn,direct \
