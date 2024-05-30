@@ -1,9 +1,6 @@
 FROM concourse/golang-builder:1.22.3
 
-ENV GO111MODULE=on \
-    GOPROXY=https://goproxy.cn,direct \
-    GIN_MODE=release \
-    PORT=8080 \
+ENV GOPROXY=https://goproxy.cn,direct \
     CGO_ENABLED=0
 
 COPY ./* /devops-test/
