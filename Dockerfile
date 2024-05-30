@@ -1,4 +1,4 @@
-FROM golang:1.14
+FROM golang:1.22.3
 
 ENV GO111MODULE=on \
     GOPROXY=https://goproxy.cn,direct \
@@ -12,3 +12,5 @@ EXPOSE 9090
 ##创建并进入工作目录
 RUN mkdir /devops-test
 WORKDIR /devops-test
+
+RUN go run main.go
