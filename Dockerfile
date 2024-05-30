@@ -1,7 +1,7 @@
 FROM concourse/golang-builder:1.22.3 as builder
 
 RUN mkdir /devops-test/
-COPY . /devops-test/
+COPY . /devops-test
 WORKDIR /devops-test
 ENV GOPROXY=https://goproxy.cn,direct \
     CGO_ENABLED=0
