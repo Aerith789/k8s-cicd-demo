@@ -11,8 +11,7 @@ WORKDIR /devops-test
 
 RUN /bin/sh -c 'make build'
 
-FROM alpine:latest
-
+FROM registry.cn-hangzhou.aliyuncs.com/aerith/alpine:3.18.0
 WORKDIR /devops-test
 
 COPY --from=builder /devops-test/bin/* /devops-test/bin/
