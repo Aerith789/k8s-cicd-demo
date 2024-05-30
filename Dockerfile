@@ -13,4 +13,3 @@ EXPOSE 9090
 RUN mkdir /devops-test
 WORKDIR /devops-test
 
-RUN go run /devops-test/main.go
