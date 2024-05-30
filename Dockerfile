@@ -6,10 +6,10 @@ ENV GO111MODULE=on \
     PORT=8080
 
 COPY ./* /devops-test/
-
 WORKDIR /devops-test
-
 RUN /bin/sh -c 'make build'
+
+
 
 FROM registry.cn-hangzhou.aliyuncs.com/aerith/alpine:3.18.0
 WORKDIR /devops-test
