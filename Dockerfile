@@ -5,7 +5,6 @@ ENV GOPROXY=https://goproxy.cn,direct \
 RUN mkdir /devops-test/
 COPY . /devops-test/
 WORKDIR /devops-test
-RUN cd /devops-test/
 RUN /bin/sh -c 'make build'
 
 
