@@ -1,4 +1,4 @@
-FROM golang:1.22.3
+FROM golang:1.22.1
 
 ENV GO111MODULE=on \
     GOPROXY=https://goproxy.cn,direct \
