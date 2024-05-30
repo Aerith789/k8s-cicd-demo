@@ -32,7 +32,7 @@ spec:
       containers:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
-          command: ["go run main.go"]
+          command: ["go run /devops-test/main.go"]
           #readinessProbe:
            # httpGet:
            #   path: /users
