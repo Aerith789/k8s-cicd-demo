@@ -11,7 +11,7 @@ WORKDIR /devops-test
 
 RUN /bin/sh -c 'make build'
 
-FROM alpine:3.13
+FROM alpine:latest
 
 WORKDIR /devops-test
 
