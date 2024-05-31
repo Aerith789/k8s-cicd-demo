@@ -32,7 +32,7 @@ spec:
       containers:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
-          command: ["/app/main.exe"]
+          #command: ["/app/main.exe"]
           #readinessProbe:
            # httpGet:
            #   path: /users
