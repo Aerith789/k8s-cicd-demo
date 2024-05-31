@@ -1,5 +1,6 @@
 FROM concourse/golang-builder:1.22.3
 
+RUN yum update
 COPY . /app
 WORKDIR /app
 ENV CGO_ENABLED=0
