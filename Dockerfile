@@ -11,6 +11,6 @@ RUN go build -o /app/ .
 FROM registry.cn-hangzhou.aliyuncs.com/aerith/alpine:latest
 
 WORKDIR /app
-COPY --from=builder /app/bin/* /app/bin/
+COPY --from=builder /app/* /app/bin/
 EXPOSE 8080/tcp
 #ENTRYPOINT [ "/app/bin/app" ]
