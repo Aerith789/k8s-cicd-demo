@@ -4,4 +4,6 @@ WORKDIR /app/
 
 COPY . /app
 EXPOSE 8080/tcp
+
+FROM registry.cn-hangzhou.aliyuncs.com/aerith/centos7:v1
 ENTRYPOINT  ["/app/"]
