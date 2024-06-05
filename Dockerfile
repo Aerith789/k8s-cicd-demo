@@ -4,7 +4,7 @@ COPY . /app
 WORKDIR /app/
 ENV CGO_ENABLED=0
 
-RUN go build /app/main.go 
+RUN go build -o /app/ . 
 
 
 
