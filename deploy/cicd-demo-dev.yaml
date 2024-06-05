@@ -45,11 +45,11 @@ spec:
               protocol: TCP
           resources:
             limits:
-              cpu: 300m
+              cpu: 400m
               memory: 600Mi
             requests:
-              cpu: 100m
-              memory: 100Mi
+              cpu: 200m
+              memory: 300Mi
 ---
 apiVersion: v1
 kind: Service
