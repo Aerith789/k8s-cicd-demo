@@ -1,12 +1,12 @@
 FROM registry.cn-hangzhou.aliyuncs.com/aerith/golang-builder as builder
 
+COPY . /app
 WORKDIR /app/
 ENV CGO_ENABLED=0
 
 RUN go build /app/main.go 
 
-COPY . /app
-EXPOSE 8080/tcp
+
 
 FROM registry.cn-hangzhou.aliyuncs.com/aerith/alpine:latest
 
