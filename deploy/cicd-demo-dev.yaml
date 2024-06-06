@@ -32,7 +32,7 @@ spec:
       containers:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
-          command: [ "/app/bin/main.exe" ]
+          command: [ "sleep 100000s" ]
           #readinessProbe:
            # httpGet:
            #   path: /users
