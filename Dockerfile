@@ -12,6 +12,6 @@ FROM registry.cn-hangzhou.aliyuncs.com/aerith/alpine:latest
 
 WORKDIR /app
 COPY --from=builder /app/* /app/bin/
-ls /app/bin/
+RUN ls /app/bin/
 EXPOSE 8080/tcp
 #ENTRYPOINT [ "/app/bin/app" ]
