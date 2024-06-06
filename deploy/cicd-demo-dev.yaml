@@ -32,8 +32,8 @@ spec:
       containers:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
-          command: [ "/devops-test/main.exe" ]
-          #command: [ "/bin/bash", "-c", "sleep 100000" ]
+          #command: [ "/devops-test/main.exe" ]
+          command: [ "/bin/bash", "-c", "sleep 100000" ]
           #readinessProbe:
            # httpGet:
            #   path: /users
