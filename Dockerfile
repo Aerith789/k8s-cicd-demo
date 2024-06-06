@@ -13,6 +13,5 @@ FROM registry.cn-hangzhou.aliyuncs.com/aerith/alpine:latest
 WORKDIR /devops-test
 COPY --from=builder /devops-test/* /devops-test/
 RUN ls /devops-test/
-RUN chmod -R 777
 EXPOSE 8080/tcp
 #ENTRYPOINT [ "/app/bin/app" ]
