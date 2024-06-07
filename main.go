@@ -18,5 +18,5 @@ func main() {
 
 // helloHandler 是一个HTTP请求处理器函数
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "K8S-CICD-DEMO") // 向客户端发送响应消息
+	fmt.Fprint(w, "K8S-CICD-DEMO:v2.0") // 向客户端发送响应消息
 }
