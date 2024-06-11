@@ -33,6 +33,7 @@ spec:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
           command: ["/app/main.go"]
+          imagePullPolicy: Always
           #readinessProbe:
            # httpGet:
            #   path: /users
