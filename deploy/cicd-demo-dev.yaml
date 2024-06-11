@@ -32,7 +32,8 @@ spec:
       containers:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
-          command: ["/app/main.go"]
+          command: ["/bin/sh" "-c" "sleep 100000s" ]
+          #command: ["/app/main.go"]
           imagePullPolicy: Always
           #readinessProbe:
            # httpGet:
