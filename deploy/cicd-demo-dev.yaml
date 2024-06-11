@@ -80,7 +80,7 @@ metadata:
   name: k8s-cicd-demo
   annotations:
     kubernetes.io/ingress.class: "nginx"
-  namespaces: devops-test
+  namespace: devops-test
 spec:
   rules:
     - host: demo.cicd.com
