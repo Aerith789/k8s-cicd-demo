@@ -90,6 +90,6 @@ spec:
             backend:
               service:
                 name: k8s-cicd-demo
-                prot:
+                port:
                   number: 8080
             path: /
