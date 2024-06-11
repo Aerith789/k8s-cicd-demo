@@ -33,7 +33,7 @@ spec:
         - name: k8s-cicd-demo
           image: registry.cn-hangzhou.aliyuncs.com/aerith/k8s-cicd-demo:v1
           #command: ["/bin/sh", "-c", "sleep 100000;" ]
-          command: ["/devops-test/main.go"]
+          command: ["/devops-test/devops-test"]
           imagePullPolicy: Always
           #readinessProbe:
            # httpGet:
